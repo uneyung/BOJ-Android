@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,7 +18,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButton1Clicked(View V) {
-        Toast.makeText(this, "버튼이 눌렸어요.", Toast.LENGTH_LONG).show();
-    }
+        DateFormat day = new SimpleDateFormat("E");
+        DateFormat hour = new SimpleDateFormat("K");
+        DateFormat minute = new SimpleDateFormat("m");
+        Date date = new Date();
+        int problems_count = 0;
+        int solve_way = 1;
 
+        if (day.format(date).equals("월") || day.format(date).equals("수") || day.format(date).equals("금")) {
+            if (hour.format(date).equals("9") && minute.format(date).equals("0")) {
+                Toast.makeText(this, "오늘은 " +
+                        day.format(date) + "요일로 백준 풀 시간입니다.", Toast.LENGTH_LONG).show();
+            } else if (hour.format(date).equals("18") && minute.format(date).equals("0")) {
+                if (problems_count >= 2)
+                    Toast.makeText(this, "백준 푸는 시간이 끝났습니다. 축하합니다.", Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(this, "백준 푸는 시간이 끝났습니다. 선정했던 2문제 중 " + problems_count + "문제를 풀었습니다.", Toast.LENGTH_LONG).show();
+            }
+
+        }
+    }
 }
