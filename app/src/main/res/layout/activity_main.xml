@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,12 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout3"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="341dp" />
+        <android.support.design.widget.TabItem
+            android:id="@+id/solve_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="solve list" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/problem_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Problem list" />
+    </android.support.design.widget.TabLayout>
 </android.support.constraint.ConstraintLayout>
