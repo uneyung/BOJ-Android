@@ -3,6 +3,7 @@ package com.uneyung.boj_android;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.text.DateFormat;
@@ -15,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(this::onButton1Clicked);
     }
 
     public void onButton1Clicked(View V) {
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         int problems_count = 0;
         int solve_way = 1;
 
-        if (day.format(date).equals("월") || day.format(date).equals("수") || day.format(date).equals("금")) {
+        if (day.format(date).equals("Mon") || day.format(date).equals("Wen") || day.format(date).equals("Fri")) {
             if (hour.format(date).equals("9") && minute.format(date).equals("0")) {
                 Toast.makeText(this, "오늘은 " +
                         day.format(date) + "요일로 백준 풀 시간입니다.", Toast.LENGTH_LONG).show();
