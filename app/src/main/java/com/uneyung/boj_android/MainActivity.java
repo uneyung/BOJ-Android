@@ -1,7 +1,9 @@
 package com.uneyung.boj_android;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,11 +16,14 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -77,18 +82,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    FileOutputStream fos = openFileOutput(FileName, MODE_PRIVATE);
-
                     for (int i = 0; i < members.length; i++) {
                         Document doc = Jsoup.connect(url + members[i]).get();
                         Elements parsingDivs = doc.getElementsByClass("problem-list");
                         Element parsingDiv = parsingDivs.get(0);
                         String contents = parsingDiv.text();
-                        contents.getBytes();
-                        arr[i] = contents + "\n";
 
                         try {
-                            fos.write(arr[i].getBytes());
+                            FileOutputStream fos = openFileOutput(members[i]+".txt", Context.MODE_PRIVATE);
+                            fos.write(contents.getBytes());
                             fos.close();
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -103,15 +105,23 @@ public class MainActivity extends AppCompatActivity {
 
         //RecyclerView 관련 변수
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
-        RecyclerView.Adapter re_adapter;
-        RecyclerView.LayoutManager layoutManager;
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager((Context) this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        String[] tempData = new String[0];
 
         try {
-            FileInputStream fis = openFileInput(FileName);
-            StringBuffer sb = new StringBuffer();
-            
+            FileInputStream fis = openFileInput(members[0]+".txt");
+            String read_data = new BufferedReader(new InputStreamReader(fis)).readLine();
+            fis.close();
+            tempData = read_data.split(" ");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+        ArrayList<String> problem_list = new ArrayList<>();
+        problem_list.addAll(Arrays.asList(tempData));
+
     }
 }
