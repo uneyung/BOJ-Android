@@ -7,10 +7,16 @@
         <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/boj_list.xml" value="0.25" />
         <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/boj_list_item.xml" value="0.2046875" />
+        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/counter_item.xml" value="0.2234375" />
+        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/fragment_p.xml" value="0.33" />
+        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/fragment_s.xml" value="0.33" />
         <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/item.xml" value="0.2" />
-        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/main_activity.xml" value="0.33" />
+        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/main_activity.xml" value="0.2" />
         <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/main_layout.xml" value="0.25" />
+        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/problem_activity.xml" value="0.22760416666666666" />
         <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/recycler_item.xml" value="0.25" />
+        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/solve_activity.xml" value="0.22760416666666666" />
+        <entry key="..\:/workspace/BOJ-Android/app/src/main/res/layout/spinner_item.xml" value="0.36614583333333334" />
         <entry key="..\:/workspace/BOJ-Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.38229166666666664" />
       </map>
     </option>

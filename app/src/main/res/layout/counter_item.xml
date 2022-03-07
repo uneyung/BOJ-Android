@@ -6,7 +6,7 @@
 
 
     <TextView
-        android:id="@+id/solve_num"
+        android:id="@+id/count_num"
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:background="@drawable/user_bolder"
