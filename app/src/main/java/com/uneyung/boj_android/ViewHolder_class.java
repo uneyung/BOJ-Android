@@ -6,11 +6,11 @@ import android.view.View;
 import android.widget.TextView;
 
 
-public class ViewHolder extends RecyclerView.ViewHolder {
+public class ViewHolder_class extends RecyclerView.ViewHolder {
     public TextView textView;
 
-    ViewHolder(Context context, View view){
+    ViewHolder_class(Context context, View view){
         super(view);
-        textView = view.findViewById(R.id.solve_num);
+        textView = view.findViewById(R.id.class_num);
     }
 }

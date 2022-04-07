@@ -1,10 +1,11 @@
 package com.uneyung.boj_android;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.Calendar;
 
@@ -13,25 +14,23 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabs;
     sfragment Sfragment;
     pfragment Pfragment;
-    FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-
-        //요일 관련 변수
+        //요일 관련 변수@
         Calendar cal = Calendar.getInstance();
         int day = cal.get(Calendar.DAY_OF_WEEK);
         String text_day = "";
+
 
 
         //fragment 관련
         Sfragment = new sfragment();
         Pfragment = new pfragment();
         tabs = findViewById(R.id.tabs);
-        fragmentManager = getSupportFragmentManager();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, Sfragment).commit();
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -46,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, Pfragment).commit();
                         break;
                 }
-
             }
 
             @Override

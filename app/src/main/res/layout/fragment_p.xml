@@ -25,8 +25,10 @@
         <TextView
             android:id="@+id/textView6"
             android:layout_width="0dp"
+            android:textSize="20sp"
             android:layout_height="match_parent"
             android:layout_weight="2"
+            android:gravity="center"
             android:background="@drawable/user_bolder" />
 
     </LinearLayout>
@@ -41,19 +43,9 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginLeft="10dp">
-
-            <CheckBox
-                android:id="@+id/checkBox"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="2 Class"
-                android:textSize="20sp" />
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
 
             <CheckBox
                 android:id="@+id/checkBox2"
@@ -62,14 +54,26 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:text=" 2 Class"
+                android:textSize="20sp" />
+
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="5 Class"
                 android:textSize="20sp" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="vertical">
 
             <CheckBox
@@ -83,7 +87,7 @@
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkBox6"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
@@ -91,16 +95,17 @@
                 android:gravity="center"
                 android:text="6 Class"
                 android:textSize="20sp" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="vertical">
 
             <CheckBox
-                android:id="@+id/checkBox5"
+                android:id="@+id/checkBox4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
@@ -110,7 +115,7 @@
                 android:textSize="20sp" />
 
             <CheckBox
-                android:id="@+id/checkBox6"
+                android:id="@+id/checkBox7"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
@@ -118,12 +123,30 @@
                 android:gravity="center"
                 android:text="7 Class"
                 android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingRight="3dp"
+                android:text="Search" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_class"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/user_bolder"

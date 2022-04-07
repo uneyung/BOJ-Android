@@ -73,7 +73,7 @@
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/re_count"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -107,12 +107,12 @@
 
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_class"
         android:layout_width="match_parent"
-        android:background="@drawable/user_bolder"
         android:layout_height="0dp"
+        android:layout_weight="8"
 
-        android:layout_weight="8"/>
+        android:background="@drawable/user_bolder" />
 
 </LinearLayout>
